@@ -1,0 +1,6 @@
+[DEFAULT]
+key_file=/oracle/.oci/oci_api_key.pem
+user=ocid1.user.oc1..aaaaaaaaufu5ibepz3e5uow25m4a544w5q2gjeats54mhvszvgb7bl2qbbsa
+fingerprint=28:9b:b6:76:b0:35:1f:fe:14:82:45:24:3c:74:85:71
+tenancy=ocid1.tenancy.oc1..aaaaaaaalj3wkj4jzguk5drokrxx2yr5zppmokn7nni6o3ldiwlcbz64kqkq
+region=us-ashburn-1

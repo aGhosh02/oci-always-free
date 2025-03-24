@@ -1,0 +1,3 @@
+# Run create_instance.sh every 5 minutes
+*/5 * * * * /bin/bash -c "/oracle/create_instance.sh >> /oracle/logs/instance_creation.log 2>&1"
+# Empty line at end of file
