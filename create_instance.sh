@@ -40,7 +40,7 @@ send_notification() {
          -H "Priority: $priority" \
          -H "Tags: computer,white_check_mark" \
          -d "$message" \
-         https://ntfy.arghyaghosh.cloud/oci
+         https://ntfy.argghosh.cc/oci
 }
 
 # Function to attempt instance launch
@@ -80,6 +80,14 @@ launch_instance() {
         echo "SUCCESS: Instance created in $ad"
         # Extract instance ID from the output
         local instance_id=$(echo "$output" | grep -o '"id": "[^"]*' | cut -d'"' -f4)
+        
+        # Check if instance ID is null or empty
+        if [ -z "$instance_id" ]; then
+            echo "ERROR: Instance ID is null or empty. Instance was not created properly."
+            echo "$output"
+            return 1
+        fi
+        
         echo "Instance ID: $instance_id"
         return 0
     fi

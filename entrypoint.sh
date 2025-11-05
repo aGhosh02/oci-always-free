@@ -12,7 +12,7 @@ if [ "$1" = "run" ]; then
     echo "Check logs at /oracle/logs/instance_creation.log"
     
     # Run script once immediately
-    su - oracle -c "/oracle/create_instance.sh >> /oracle/logs/instance_creation.log 2>&1"
+    su - oracle -c "/oracle/create_instance.sh"
     
     # Keep container running
     tail -f /dev/null
